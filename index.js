@@ -31,7 +31,10 @@ app.get(BASE_API_PATH +"/contacts", (req,res) =>{
             console.log(Date() + " - "+ err);
             res.sendStatus(500);
         }else{
-            res.send(contats);
+            res.send(contats.map((contact)=>{
+                delete contact._id;
+                return contact;
+            }));
         }
     }); //así nos devuelve todos los elementos de la bbdd, porque no hemos indicado nada en la consulta
     
