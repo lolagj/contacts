@@ -2,7 +2,7 @@ var express= require ('express'); //es la forma de cargar la librería. Cuando v
 var bodyParser = require('body-parser'); //módulo body parser --> para leer el cuerpo de las request
 var DataStore = require('nedb');
 
-var port= 3000; //puerto donde va a estar escuchando nuestro servidor web
+var port= (process.env.PORT || 3000); //puerto donde va a estar escuchando nuestro servidor web
 var BASE_API_PATH = "/api/v1";// base para todas nuestras apis
 var DB_FILE_NAME = __dirname + "/contacts.jason";
 
