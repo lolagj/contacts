@@ -13,7 +13,7 @@ contactSchema.methods.cleanup = function(){
 }
 
 //Creamos la clase contacto
-const Contact = moongoose.model('Contact', contactSchema);
+const Contact = mongoose.model('Contact', contactSchema);
 
 //lo exportamos
 module.exports = Contact;
