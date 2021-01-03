@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 //conexión a la bbdd. damos la conexión por defecto: (podemos poner ahí localhost en vez de mongo, pero en nuestro caso es más cómodo poner mongo)
-const DB_URL=(process.env.MONGO_URL || 'mongodb://mongo/test');
+const DB_URL=(process.env.MONGO_URL || 'mongodb://localhost/test');
 const dbConnect= function(){
     const db=mongoose.connection; //objeto mongoose de conexión
     db.on('error', console.error.bind(console, 'connection error: ')); //sist para gestión de errores

@@ -21,7 +21,7 @@ app.get(BASE_API_PATH +"/contacts", (req,res) =>{
             res.sendStatus(500);
         }else{
             res.send(contats.map((contact)=>{
-                return contacts.cleanup(); 
+                return contact.cleanup(); 
             }));
         }
     }); //así nos devuelve todos los elementos de la bbdd, porque no hemos indicado nada en la consulta
