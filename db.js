@@ -2,7 +2,7 @@ const mongoose= require('mongoose');
 //conexión a la bbdd. damos la conexión por defecto: (podemos poner ahí localhost en vez de mongo, pero en nuestro caso es más cómodo poner mongo)
 const DB_URL=(process.env.MONGO_URL || 'mongodb://mongo/test');
 const dbConnect= function(){
-    const db=mongose.connection; //objeto mongoose de conexión
+    const db=mongoose.connection; //objeto mongoose de conexión
     db.on('error', console.error.bind(console, 'connection error: ')); //sist para gestión de errores
     return mongoose.connect(DB_URL,{useNewUrlParser:true}); //parámetro que realmente realiza la ocnexión y es lo que devolvemos. 
     //userNewUrlParser --> nos lo pide la librería mongo db
